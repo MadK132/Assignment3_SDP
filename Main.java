@@ -35,6 +35,29 @@ public class Main {
 
 
         allMenus.print();
+
+
+        Pizza pizza = new MargheritaPizza();
+        pizza = new CheeseTopping(pizza);
+        pizza = new MushroomTopping(pizza);
+        pizza = new PepperoniTopping(pizza);
+
+        System.out.println("Order: " + pizza.getDescription());
+        System.out.println("Total cost: $" + pizza.getCost());
+
+
+
+        Light light = new Light();
+        Thermostat thermostat = new Thermostat();
+        SecuritySystem securitySystem = new SecuritySystem();
+        EntertainmentSystem entertainmentSystem = new EntertainmentSystem();
+
+        SmartHomeFacade smartHome = new SmartHomeFacade(light, thermostat, securitySystem, entertainmentSystem);
+
+        smartHome.arriveHome();
+        smartHome.movieMode();
+        smartHome.nightMode();
+        smartHome.leaveHome();
     }
 }
 
