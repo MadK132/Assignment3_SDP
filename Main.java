@@ -58,6 +58,32 @@ public class Main {
         smartHome.movieMode();
         smartHome.nightMode();
         smartHome.leaveHome();
+
+
+
+        CharacterFactory characterFactory = new CharacterFactory();
+        TextEditor textEditor = new TextEditor(characterFactory);
+
+        textEditor.insertCharacter(1, 'H', "Arial", 12);
+        textEditor.insertCharacter(2, 'e', "Arial", 12);
+        textEditor.insertCharacter(3, 'l', "Arial", 12);
+        textEditor.insertCharacter(4, 'l', "Arial", 12);
+        textEditor.insertCharacter(5, 'o', "Arial", 12);
+
+        textEditor.renderDocument();
+
+
+
+        OnlineCourse course = new OnlineCourse();
+
+        course.addLecture(new ProxyVideoLecture("Design Patterns Overview"));
+        course.addLecture(new ProxyVideoLecture("Facade Pattern Explained"));
+        course.addLecture(new ProxyVideoLecture("Proxy Pattern in Action"));
+
+        course.showLectures();
+
+        System.out.println("\nPlaying first lecture:");
+        course.playLecture(0);
     }
 }
 
