@@ -32,11 +32,7 @@ public class Main {
         allMenus.add(pancakeHouseMenu);
         allMenus.add(dinerMenu);
 
-        pancakeHouseMenu.add(new MenuItem("Pancake Breakfast", "Pancakes with scrambled eggs", 2.99));
-        dinerMenu.add(new MenuItem("Vegetarian BLT", "Fakin' Bacon with lettuce & tomato", 2.99));
-        dinerMenu.add(dessertMenu);
 
-        dessertMenu.add(new MenuItem("Apple Pie", "Apple pie with a flakey crust", 1.59));
 
         allMenus.print();
     }
